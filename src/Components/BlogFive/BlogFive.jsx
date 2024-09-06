@@ -70,7 +70,7 @@ const BlogFive = () => {
             تحديد كيفية ومتى سيتم تسليم السلع أو تقديم الخدمات.
           </li>
           <li>
-            <span className="text-main font-bold">لالتزامات والشروط</span>
+            <span className="text-main font-bold">الإلتزامات والشروط</span>
           </li>
           <li>
             <span className="text-main font-bold">واجبات الأطراف: </span>
