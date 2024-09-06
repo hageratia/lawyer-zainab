@@ -3,7 +3,7 @@ import logo from "../../assets/logo-footer.png";
 const FooterPage = () => {
   return (
     <>
-      <footer className=" py-3">
+      <footer className=" pt-3 pb-1">
         <div className="container">
           <div className="row">
             <div className="col-md-4 text-center my-4">
@@ -114,6 +114,9 @@ const FooterPage = () => {
               </a>
             </div>
           </div>
+          <p className="text-main text-center">
+            جميع الحقوق محفوظة 2024 © زينب ابراهيم للمحاماة
+          </p>
         </div>
       </footer>
     </>

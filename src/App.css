@@ -1,3 +1,4 @@
+/* ----------------------General----------------- */
 @font-face {
   font-family: 'Bahij TheSansArabic';
   src: url('./assets/fonts/Bahij_TheSansArabic/Bahij_TheSansArabic-Bold.ttf') format('truetype'),
@@ -122,6 +123,7 @@ line {
   text-align-last: right;
 }
 
+/* ---------------------Navbar--------------------- */
 .navbar-logo {
   width: 110px;
   height: auto;
@@ -157,6 +159,7 @@ line {
   color: rgba(255, 255, 255, 1) !important;
 }
 
+/* -------------------------home------------------------------- */
 .home {
   background-image: url(./assets/home.jfif);
   background-position: center;
@@ -178,7 +181,7 @@ line {
   flex-direction: column;
 }
 
-
+/* -----------------------about----------------------- */
 .about-sec {
   width: 90%;
   margin: auto;
@@ -224,16 +227,15 @@ line {
   align-self: center;
 }
 
-/* App.css */
 
-/* لتحديد حجم ولون المربع في أسفل ويمين كل صورة */
+/* ------------------------------services----------------------------- */
+
 #services .image-container {
   position: relative;
   display: inline-block;
 }
 
 #services .image-container img {
-  /* display: block; */
   width: 100%;
   height: auto;
   z-index: 999 !important;
@@ -249,7 +251,7 @@ line {
   z-index: -1;
 }
 
-
+/* ------------------------------certificates----------------------------- */
 #certificates .icons img {
   transition: all .5s ease-in-out;
 }
@@ -262,11 +264,13 @@ line {
   width: 90px;
 }
 
+/* ----------------------------features----------------------- */
 #features .content h3 {
   word-spacing: 8px;
   line-height: 45px;
 }
 
+/* --------------------------------blogs------------------------- */
 #blogs .cards {
   border: solid 1px #7373ab;
   transition: all .5s ease-in-out;
@@ -282,7 +286,7 @@ line {
   color: white;
 }
 
-
+/* --------------------------------free----------------------- */
 
 #free {
   background-color: #25255E;
@@ -348,6 +352,7 @@ line {
   padding: 10px 20px;
 }
 
+/* --------------------------footer----------------------- */
 footer {
   background-color: #D9D9D9;
 }
