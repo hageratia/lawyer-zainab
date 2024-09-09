@@ -58,7 +58,7 @@ const CertificatesPage = () => {
               >
                 <img src={hy2a} alt="الهيئة السعودية للمحامين" />
                 <p className="small-paragraph" dir="rtl">
-                  عضو أساسي بالهيئة السعودية للمحاميـن
+                  عضــو أســاسـي بالهـيئة السـعـوديـة للمحاميـن
                 </p>
               </motion.div>
             </div>

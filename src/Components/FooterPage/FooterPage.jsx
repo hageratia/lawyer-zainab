@@ -1,4 +1,4 @@
-import logo from "../../assets/logo-footer.png";
+import logo from "../../assets/logo-footer3.png";
 
 const FooterPage = () => {
   return (
@@ -21,7 +21,7 @@ const FooterPage = () => {
             </div>
             <div className="col-md-4 text-center">
               <div className="img-container">
-                <img src={logo} alt="" />
+                <img src={logo} className="w-25" alt="" />
               </div>
               <div className="social-media">
                 <ul className="d-flex justify-content-center list-unstyled mt-2">

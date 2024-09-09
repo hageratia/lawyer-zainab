@@ -28,7 +28,7 @@ const BlogTwo = () => {
           استخدام واستغلال إبداعاتهم.
         </p>
         <h3 className="text-brown">أنواع حقوق الملكية الفكرية:</h3>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">براءات الاختراع: </span>
             تُمنح للمخترعين لحماية اختراعاتهم الجديدة والمبتكرة.تمنح البراءة

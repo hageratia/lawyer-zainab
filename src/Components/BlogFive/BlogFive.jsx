@@ -26,7 +26,7 @@ const BlogFive = () => {
           الحقوق والواجبات بين الأطراف لضمان تنفيذ الاتفاق بشكل عادل وفعال.
         </p>
         <h3 className="text-brown">أهمية صياغة العقود التجارية</h3>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold"> تحديد المسؤوليات: </span>
             توضيح واجبات وحقوق كل طرف،مما يساعد في تجنب النزاعات والتفسير الخاطئ
@@ -47,7 +47,7 @@ const BlogFive = () => {
         </ul>
         <h3 className="text-brown">عناصر رئيسية في صياغة العقود التجارية:</h3>
         <p className="small-pharagraph">المقدمة والتعاريف:</p>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">تحديد الأطراف: </span>
             توضيح هوية الأطراف المتعاقدة،بما في ذلك أسمائهم،عناوينهم،وأي تفاصيل
@@ -118,7 +118,7 @@ const BlogFive = () => {
           </li>
         </ul>
         <h3 className="text-brown">التحديات في صياغة العقود التجارية:</h3>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">التفاصيل الدقيقة: </span>
             يتطلب العقد التجاري دقة في تحديد الشروط لتفادي أي لبس أو سوء فهم.
@@ -137,7 +137,7 @@ const BlogFive = () => {
         <h3 className="text-brown text-center">
           نصائح مكتب المحامية زينب إبراهيم لصياغة عقود تجارية فعالة:
         </h3>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">الاستعانة بمحامٍ متخصص:</span>
             للحصول على مشورة قانونية لضمان توافق العقد مع القوانين المحلية

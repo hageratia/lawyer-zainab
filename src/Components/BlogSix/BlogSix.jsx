@@ -44,7 +44,7 @@ const BlogSix = () => {
           تتناول النزاعات التي تنشأ من العقود التي تُبرم عبر الإنترنت.
         </p>
         <h3 className="text-brown">أنواع القضايا المعلوماتية:</h3>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">
               {" "}
@@ -71,7 +71,7 @@ const BlogSix = () => {
         <h3 className="text-brown">
           الإجراءات القانونية في القضايا المعلوماتية:
         </h3>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">رفع الدعوى: </span>
             يتم ذلك من خلال تقديم الدعوى إلى المحكمة المختصة، مشفوعة بالأدلة
@@ -97,7 +97,7 @@ const BlogSix = () => {
         <p className="small-pharagraph">
           تواجه القضايا المعلوماتية عدة تحديات، منها:
         </p>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">
               التطور التكنولوجي السريع:{" "}
@@ -127,7 +127,7 @@ const BlogSix = () => {
           الإجراءات الوقائية:
         </p>
 
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">
               تطبيق سياسات حماية البيانات:{" "}
@@ -153,7 +153,7 @@ const BlogSix = () => {
           في المملكة العربية السعودية، يتم تنظيم القضايا المعلوماتية من خلال عدة
           قوانين هامة، منها:
         </p>
-        <ul>
+        <ul className="lh">
           <li>
             <span className="text-main font-bold">
               نظام مكافحة الجرائم المعلوماتية:

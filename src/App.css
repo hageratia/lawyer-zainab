@@ -223,6 +223,12 @@ line {
   line-height: 1.6;
 }
 
+.small-pharagraph,
+.lh {
+
+  line-height: 1.7;
+}
+
 .last-two-words {
   align-self: center;
 }
