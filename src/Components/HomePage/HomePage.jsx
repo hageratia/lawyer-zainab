@@ -31,6 +31,15 @@ const HomePage = () => {
       <BlogsPage />
       <FreeConsultaion />
       <Footer />
+      <button className="i-whats rounded rounded-circle">
+        <a
+          href="https://wa.me/966546519560"
+          target="_blank"
+          className="text-decoration-none text-white"
+        >
+          <i className="fa-brands fa-whatsapp"></i>
+        </a>
+      </button>
     </>
   );
 };
