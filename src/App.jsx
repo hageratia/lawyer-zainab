@@ -7,6 +7,12 @@ import BlogThree from "./Components/BlogThree/BlogThree";
 import BlogFour from "./Components/BlogFour/BlogFour";
 import BlogFive from "./Components/BlogFive/BlogFive";
 import BlogSix from "./Components/BlogSix/BlogSix";
+import BlogSeven from "./Components/BlogSeven/BlogSeven";
+import BlogEight from "./Components/BlogEight/BlogEight";
+import BlogNine from "./Components/BlogNine/BlogNine";
+import BlogTen from "./Components/BlogTen/BlogTen";
+import BlogEleven from "./Components/BlogEleven/BlogEleven";
+import BlogTwenteen from "./Components/BlogTwenteen/BlogTwenteen";
 
 function App() {
   const router = createBrowserRouter([
@@ -41,6 +47,30 @@ function App() {
     {
       path: "/information-issues",
       element: <BlogSix />,
+    },
+    {
+      path: "/devorce",
+      element: <BlogSeven />,
+    },
+    {
+      path: "/establishing-companies",
+      element: <BlogEight />,
+    },
+    {
+      path: "/criminal-cases",
+      element: <BlogNine />,
+    },
+    {
+      path: "/labor-relations",
+      element: <BlogTen />,
+    },
+    {
+      path: "/debt-collection",
+      element: <BlogEleven />,
+    },
+    {
+      path: "/preparing-legal-memorandums",
+      element: <BlogTwenteen />,
     },
   ]);
 

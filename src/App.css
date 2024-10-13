@@ -410,3 +410,8 @@ footer .social-media a {
     transform: translateY(-3px);
   }
 }
+
+.load {
+  animation: bounce 2s infinite;
+  /* padding: 5px; */
+}

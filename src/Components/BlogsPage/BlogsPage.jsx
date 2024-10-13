@@ -1,7 +1,33 @@
+import { useState } from "react";
 import "../../App.css";
 import { Link } from "react-router-dom";
 
 const BlogsPage = () => {
+  const [visibleBlogs, setVisibleBlogs] = useState(6);
+  const [showAll, setShowAll] = useState(false); // حالة جديدة لإدارة إظهار المزيد
+
+  const loadMoreBlogs = () => setVisibleBlogs((prev) => prev + 6);
+  const hideBlogs = () => {
+    setVisibleBlogs(6);
+    setShowAll(false); // إخفاء المدونات الإضافية
+  };
+
+  // قائمة المدونات
+  const blogs = [
+    { title: "التقاضي في القضايا التجارية", link: "/commercial-issues" },
+    { title: "أنظمة الملكية الفكرية", link: "/astronomical-property" },
+    { title: "قضايا تقسيم التركات", link: "/division-of-estates" },
+    { title: "الدعاوى العقارية وحقوق التملك", link: "/real-estate-lawsuits" },
+    { title: "صياغة العقود التجارية", link: "/commercial-ontracts" },
+    { title: "القضايا المعلوماتية", link: "/information-issues" },
+    { title: "الطلاق وفسخ عقد النكاح والخُلع", link: "/devorce" },
+    { title: "تأسيس شركات", link: "/establishing-companies" },
+    { title: "القضايا الجنائية", link: "/criminal-cases" },
+    { title: "العلاقات العمالية", link: "/labor-relations" },
+    { title: "تحصيل الديون", link: "/debt-collection" },
+    { title: "إعداد مذكرات قانونية", link: "/preparing-legal-memorandums" },
+  ];
+
   return (
     <>
       <section id="blogs" className="my-5 py-5">
@@ -13,91 +39,42 @@ const BlogsPage = () => {
             className="row text-center g-3 justify-content-between"
             dir="rtl"
           >
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="lay cards p-2 rounded m-3">
-                <Link
-                  to={"/commercial-issues"}
-                  className="text-decoration-none"
-                >
-                  <div className="content-blog mt-2 pb-2">
-                    <h5 className="text-main font-bold text-brown">
-                      التقاضي في القضايا التجارية
-                    </h5>
-                  </div>
-                </Link>
+            {blogs.slice(0, visibleBlogs).map((blog, index) => (
+              <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
+                <div className="lay cards p-2 rounded m-3">
+                  <Link to={blog.link} className="text-decoration-none">
+                    <div className="content-blog mt-2 pb-2">
+                      <h5 className="text-main font-bold text-brown">
+                        {blog.title}
+                      </h5>
+                    </div>
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="lay cards p-2 rounded m-3">
-                <Link
-                  to={"/astronomical-property"}
-                  className="text-decoration-none"
-                >
-                  <div className="content-blog mt-2 pb-2">
-                    <h5 className="text-main font-bold text-brown">
-                      أنظمة الملكية الفكرية
-                    </h5>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="lay cards p-2 rounded m-3">
-                <Link
-                  to={"/division-of-estates"}
-                  className="text-decoration-none"
-                >
-                  <div className="content-blog mt-2 pb-2">
-                    <h5 className="text-main font-bold text-brown">
-                      قضايا تقسيم التركات
-                    </h5>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="lay cards p-2 rounded m-3">
-                <Link
-                  to={"/real-estate-lawsuits"}
-                  className="text-decoration-none"
-                >
-                  <div className="content-blog mt-2 pb-2">
-                    <h5 className="text-main font-bold text-brown">
-                      الدعاوى العقارية وحقوق التملك
-                    </h5>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="lay cards p-2 rounded m-3">
-                <Link
-                  to={"/commercial-ontracts"}
-                  className="text-decoration-none"
-                >
-                  <div className="content-blog mt-2 pb-2">
-                    <h5 className="text-main font-bold text-brown">
-                      صياغة العقود التجارية
-                    </h5>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 ">
-              <div className="lay cards p-2 rounded m-3">
-                <Link
-                  to={"/information-issues"}
-                  className="text-decoration-none"
-                >
-                  <div className="content-blog mt-2 pb-2">
-                    <h5 className="text-main font-bold text-brown">
-                      القضايا المعلوماتية
-                    </h5>
-                  </div>
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
+          {/* زر تحميل المزيد */}
+          {visibleBlogs < blogs.length && !showAll && (
+            <div className="text-center my-4">
+              <button
+                className="load bg-brown border rounded-circle"
+                onClick={loadMoreBlogs}
+              >
+                <i className="fa-solid fa-caret-down text-white p-1"></i>
+              </button>
+            </div>
+          )}
+          {/* زر إخفاء المدونات */}
+          {visibleBlogs > 6 && (
+            <div className="text-center my-4">
+              <button
+                className="bg-brown border rounded-circle"
+                onClick={hideBlogs}
+              >
+                <i className="fa-solid fa-caret-up text-white p-1"></i>
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
