@@ -4,15 +4,14 @@ import { Link } from "react-router-dom";
 
 const BlogsPage = () => {
   const [visibleBlogs, setVisibleBlogs] = useState(6);
-  const [showAll, setShowAll] = useState(false); // حالة جديدة لإدارة إظهار المزيد
+  const [showAll, setShowAll] = useState(false);
 
   const loadMoreBlogs = () => setVisibleBlogs((prev) => prev + 6);
   const hideBlogs = () => {
     setVisibleBlogs(6);
-    setShowAll(false); // إخفاء المدونات الإضافية
+    setShowAll(false);
   };
 
-  // قائمة المدونات
   const blogs = [
     { title: "التقاضي في القضايا التجارية", link: "/commercial-issues" },
     { title: "أنظمة الملكية الفكرية", link: "/astronomical-property" },
@@ -53,7 +52,6 @@ const BlogsPage = () => {
               </div>
             ))}
           </div>
-          {/* زر تحميل المزيد */}
           {visibleBlogs < blogs.length && !showAll && (
             <div className="text-center my-4">
               <button
@@ -64,7 +62,6 @@ const BlogsPage = () => {
               </button>
             </div>
           )}
-          {/* زر إخفاء المدونات */}
           {visibleBlogs > 6 && (
             <div className="text-center my-4">
               <button
